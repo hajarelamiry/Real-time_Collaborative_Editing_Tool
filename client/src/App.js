@@ -1,15 +1,18 @@
-import Home from './component/Home';
-import Edit from './component/Edit';
 import './App.css';
-import { Routes,Route } from 'react-router-dom';
-import {Toaster} from 'react-hot-toast';
+import { Routes, Route } from "react-router-dom";
+import Home from './components/Home';
+import EditorPage from './components/EditorPage';
+import { Toaster } from 'react-hot-toast';
+
 function App() {
   return (
     <>
-    <Toaster position='top-center'></Toaster>
+    <div>
+      <Toaster  position='top-center'></Toaster>
+    </div>
     <Routes>
-      <Route path='/' element={<Home />}/>
-      <Route path='/editor/:roomId' element={<Edit />}/>
+     <Route path='/' element={ <Home /> } />
+     <Route path='/editor/:roomId' element={ <EditorPage /> } />
     </Routes>
     </>
   );
